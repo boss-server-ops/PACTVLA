@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# Copyright 2026 PACT-VLA Authors. Licensed under the Apache License, Version 2.0; see LICENSE.
 """PACT-VLA on GR00T N1.7 / LIBERO.
 
 flow_velocity (a replication of the official action-head forward at a given

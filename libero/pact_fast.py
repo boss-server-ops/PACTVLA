@@ -1,3 +1,4 @@
+# Copyright 2026 PACT-VLA Authors. Licensed under the Apache License, Version 2.0; see LICENSE.
 """PACT-VLA inside VLASH's batched LIBERO evaluator.
 
 The method needs no simulator access. It samples K chunks from the observation it already has,

@@ -98,3 +98,10 @@ observation, so any difference there comes from independent sampling.
 
 The $\pi_{0.5}$ evaluation builds on the official VLASH codebase and the LIBERO benchmark; the
 GR00T evaluation uses Isaac GR00T. We thank the authors for releasing their code.
+
+## License
+
+Released under the [Apache License 2.0](LICENSE). `libero/eval_libero_noisy.py` is modified
+from the VLASH evaluator (built on LeRobot), and `libero/groot_flow.py` replicates part of the
+Isaac GR00T action head; both upstream projects are Apache-2.0. Model checkpoints are not
+included and remain under their own terms.

@@ -1,3 +1,8 @@
+# Copyright 2026 PACT-VLA Authors.
+# Modified from the LIBERO evaluator of VLASH, which builds on LeRobot (both Apache-2.0).
+# Changes: inference-delay emulation and the PACT-VLA candidate-selection hook.
+# Licensed under the Apache License, Version 2.0; see LICENSE.
+
 import json
 import logging
 import multiprocessing as mp

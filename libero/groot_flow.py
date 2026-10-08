@@ -1,3 +1,8 @@
+# Copyright 2026 PACT-VLA Authors.
+# flow_velocity replicates part of the action-head forward pass of Isaac GR00T (Apache-2.0)
+# so that the velocity can be evaluated at caller-supplied (x_t, t).
+# Licensed under the Apache License, Version 2.0; see LICENSE.
+
 """Velocity and input helpers for scoring candidates with GR00T N1.7.
 
 The official action head only exposes forward(), which samples its own flow
