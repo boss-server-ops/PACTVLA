@@ -1,4 +1,4 @@
-# PACT-VLA: Pre-Commit Action-Chunk Verification for Flow-Based VLAs
+# PACT-VLA: Speculative Action-Chunk Verification with Pre-Commit Observations
 
 PACT-VLA is a training-free test-time method for flow-based vision-language-action (VLA)
 policies executed under inference delay. While a new action chunk is being generated, the
