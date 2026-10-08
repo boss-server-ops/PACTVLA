@@ -66,6 +66,25 @@ SUITE=libero_object K=8 bash scripts/run_libero_groot.sh
 frame among `stale` ($o_t$), `prev` ($o_{t+d-1}$, default) and `fresh` ($o_{t+d}$), and
 `SELECT=random` replaces the score with a uniform random pick.
 
+## Ablations
+
+The selector ablations use the GR00T N1.7 evaluator with the same per-suite checkpoints,
+execution protocol and episode count as the main LIBERO runs. Every arm is a separate run.
+
+Selector comparison at $d=4$ (single candidate, random pick, FlowRes on $o_t$, PACT-VLA):
+
+```bash
+export GROOT_ROOT=<isaac_groot> CKPT=<groot_suite_checkpoint> SUITE=libero_goal DELAYS=4
+K=1                bash scripts/run_libero_groot.sh   # single-candidate baseline
+K=8 SELECT=random  bash scripts/run_libero_groot.sh   # random pick from 8 candidates
+K=8 VERIFY=stale   bash scripts/run_libero_groot.sh   # FlowRes under the generation observation o_t
+K=8 VERIFY=prev    bash scripts/run_libero_groot.sh   # PACT-VLA, pre-commit observation o_{t+d-1}
+```
+
+Effect of the verification observation across delays: run the last two arms with
+`DELAYS=1,2,3,4` and take the difference per delay. At $d=1$ both arms read the same
+observation, so any difference there comes from independent sampling.
+
 ## Notes
 
 - A single noise sample is shared across the $N$ candidates and all verification flow times
